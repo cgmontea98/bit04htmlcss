@@ -3,7 +3,6 @@
 }
 body {
   width: 1024px;
-  height: 512px;
   margin: 16px auto;
   background-color: #f2e7ac;
   border: 2px;
@@ -51,7 +50,7 @@ nav {
 li {
   list-style: none;
   display: inline-block;
-  text-align:center;
+  text-align: center;
   margin: 20px;
 }
 main {
@@ -82,7 +81,7 @@ main {
   margin-left: 50%;
   text-align: justify;
 }
-.p5{
+.p5 {
   margin: 4px;
   padding: 5px;
   text-align: justify;
@@ -90,9 +89,6 @@ main {
 .obras {
   justify-content: end;
   align-items: flex-end;
-}
-table{
-  
 }
 .ipecal {
   justify-content: start;
@@ -120,11 +116,136 @@ a {
   background: #7a8c51;
   text-decoration: none;
 }
-dt{
+dt {
   margin-left: 25px;
   font-style: oblique;
 }
-dd{
+dd {
   text-align: justify;
   font-style: oblique;
+}
+@media screen and (max-width: 768px) {
+  body {
+    width: 768px;
+    background-color: #f2e7ac;
+    border: 2px;
+    display: grid;
+    grid-template-columns: 255px 255px 255px 255px;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header header header"
+      "nav nav nav"
+      "main main aside"
+      "footer footer footer";
+  }
+  header,
+  nav,
+  main,
+  aside,
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  header {
+    width: 100%;
+  }
+  nav {
+    width: 100%;
+  }
+  li {
+    display: inline;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    display: inline;
+    padding: 0;
+    margin: 15px;
+  }
+  main {
+    width: 95%;
+    display: block;
+  }
+  aside {
+    width: 80%;
+    display: block;
+  }
+  footer {
+    width: 90%;
+  }
+  table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  td {
+    padding: 10px;
+    border-bottom: solid dimgray;
+  }
+}
+@media screen and (max-width: 576px) {
+  body {
+    width: 576px;
+    margin: 0 55px;
+    background-color: #f2e7ac;
+    border: 2px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 255px 255px;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "main main"
+      "aside aside"
+      "footer footer";
+  }
+  header,
+  nav,
+  main,
+  aside,
+  footer {
+    margin: 0 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+  }
+  header {
+    width: 75%;
+  }
+  nav {
+    width: 75%;
+  }
+  li {
+    display: inline;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    display: inline;
+    padding: 0;
+    margin: 15px;
+  }
+  main {
+    width: 75%;
+    display: block;
+  }
+  aside {
+    width: 75%;
+    display:grid;
+  }
+  footer {
+    width: 75%;
+  }
+  table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  td {
+    padding: 10px;
+    border-bottom: solid dimgray;
+  }
 }
